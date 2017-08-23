@@ -35,8 +35,9 @@
     "contributors": "https://github.com/TryGhost/Casper/graphs/contributors",
     "devDependencies": {
         "autoprefixer": "6.3.6",
+        "browser-sync": "^2.18.13",
         "cssnano": "3.7.1",
-        "gulp": "3.9.1",
+        "gulp": "^3.9.1",
         "gulp-livereload": "3.8.1",
         "gulp-nodemon": "2.1.0",
         "gulp-postcss": "6.1.1",
@@ -49,5 +50,8 @@
     },
     "config": {
         "posts_per_page": 25
+    },
+    "dependencies": {
+        "gulp-webserver": "^0.9.1"
     }
 }
