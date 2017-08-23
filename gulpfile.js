@@ -13,6 +13,7 @@ var colorFunction = require('postcss-color-function');
 var cssnano = require('cssnano');
 var customProperties = require('postcss-custom-properties');
 var easyimport = require('postcss-easy-import');
+var webserver = require("gulp-webserver");
 
 var swallowError = function swallowError(error) {
     gutil.log(error.toString());
@@ -51,4 +52,14 @@ gulp.task('watch', function () {
 
 gulp.task('default', ['build'], function () {
     gulp.start('watch');
+});
+
+gulp.task("preview", function () {
+  return gulp.src('./assets/built')
+    .pipe(webserver({
+      host: "0.0.0.0",
+      port: "8000",
+      directoryListing: false,
+      fallback: "index.html"
+    }))
 });
