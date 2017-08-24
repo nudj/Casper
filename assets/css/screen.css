@@ -27,6 +27,7 @@ production stylesheet in assets/built/screen.css
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
 @import "global.css";
+@import "fonts.css";
 
 body {
     background: #f4f8fb;
@@ -110,7 +111,7 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     color: #fff;
-    background: color(var(--darkgrey) l(-5%)) no-repeat center center;
+    background: var(--charcoal) no-repeat center center;
     background-size: cover;
 }
 
@@ -409,7 +410,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .post-card-image {
     width: auto;
     height: 200px;
-    background: var(--lightgrey) no-repeat center center;
+    background: var(--nudjlgrey) no-repeat center center;
     background-size: cover;
 }
 
@@ -417,7 +418,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     position: relative;
     display: block;
     padding: 25px 25px 0;
-    color: var(--darkgrey);
+    color: var(--charcoal);
 }
 
 .post-card-content-link:hover {
@@ -447,7 +448,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .post-card-excerpt {
-    font-family: Georgia, serif;
+    font-family: "F37 Jan", serif;
 }
 
 .post-card-meta {
@@ -459,6 +460,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     height: 25px;
     margin-right: 5px;
     border-radius: 100%;
+    object-fit: cover;
 }
 
 .post-card-author {
@@ -543,7 +545,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     position: relative;
     z-index: 50;
 }
-/* ^ Required to make .post-full-content:before/after z-index stacking work */
+/* ^ Required to make .:before/after z-index stacking work */
 
 .post-full-header {
     max-width: 1040px;
@@ -563,12 +565,12 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .post-full-meta-date {
-    color: var(--blue);
+    color: var(--royalblue);
 }
 
 .post-full-title {
     margin: 0;
-    color: color(var(--darkgrey) l(-5%));
+    color: var(--charcoal);
 }
 
 .date-divider {
@@ -579,7 +581,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-image {
     height: 800px;
     margin: 0 -10vw -165px;
-    background: var(--lightgrey) center center;
+    background: var(--nudjlgrey) center center;
     background-size: cover;
     border-radius: 5px;
 }
@@ -603,7 +605,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     min-height: 230px;
     margin: 0 auto;
     padding: 70px 100px 0;
-    font-family: Georgia, serif;
+    font-family: "F37 Jan", serif;
     font-size: 2.2rem;
     line-height: 1.6em;
     background: #fff;
@@ -686,18 +688,17 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .post-full-content a {
-    color: #000;
-    box-shadow: var(--blue) 0 -1px 0 inset;
+    color: var(--royalblue);
+    box-shadow: var(--royalblue) 0 -1px 0 inset;
 }
 
 .post-full-content a:hover {
-    color: var(--blue);
     text-decoration: none;
 }
 
 .post-full-content strong,
 .post-full-content em {
-    color: color(var(--darkgrey) l(-5%));
+    color: var(--charcoal);
 }
 
 .post-full-content small {
@@ -760,7 +761,7 @@ Usage (In Ghost editor):
     margin: 0 0 1.5em 0;
     padding: 1.5em 0;
     border: 0;
-    color: var(--blue);
+    color: var(--royalblue);
     font-size: 3rem;
     line-height: 1.6em;
     text-align: center;
@@ -790,7 +791,7 @@ Usage (In Ghost editor):
     font-size: 0.8em;
     line-height: 1em;
     font-weight: 400!important;
-    background: var(--whitegrey);
+    background: var(--nudjwgrey);
     border-radius: 3px;
 }
 
@@ -799,11 +800,11 @@ Usage (In Ghost editor):
     overflow-x: auto;
     margin: 1.5em 0 3em;
     padding: 20px;
-    border: color(var(--darkgrey) l(-10%)) 1px solid;
-    color: var(--whitegrey);
+    border: color(var(--charcoal) l(-5%)) 1px solid;
+    color: var(--nudjwgrey);
     font-size: 1.4rem;
     line-height: 1.5em;
-    background: color(var(--darkgrey) l(-3%));
+    background: color(var(--charcoal) l(-2%));
     border-radius: 5px;
 }
 
@@ -831,7 +832,7 @@ Usage (In Ghost editor):
     width: 1px;
     height: 30px;
     margin-left: -10px;
-    background: color(var(--lightgrey) l(+10%));
+    background: color(var(--nudjlgrey) l(+10%));
     box-shadow: #fff 0 0 0 5px;
     transform: rotate(45deg);
 }
@@ -845,7 +846,7 @@ Usage (In Ghost editor):
     margin-top: -75px;
     padding-top: 75px;
     color: color(var(--darkgrey) l(-5%));
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: "F37 Jan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .post-full-content h1 {
@@ -885,7 +886,7 @@ Usage (In Ghost editor):
 }
 
 .footnote-backref {
-    color: var(--blue) !important;
+    color: var(--royalblue) !important;
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none !important;
@@ -933,7 +934,7 @@ Usage (In Ghost editor):
     border-spacing: 0;
     border-collapse: collapse;
     vertical-align: top;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: "F37 Jan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 1.6rem;
     white-space: nowrap;
 }
@@ -960,19 +961,19 @@ Usage (In Ghost editor):
 }
 
 .post-full-content table th {
-    color: var(--darkgrey);
+    color: var(--charcoal);
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.2px;
     text-align: left;
     text-transform: uppercase;
-    background-color: color(var(--whitegrey) l(+4%));
+    background-color: color(var(--nudjwgrey) l(+4%));
 }
 
 .post-full-content table th,
 .post-full-content table td {
     padding: 6px 12px;
-    border: color(var(--whitegrey) l(-1%) s(-5%)) 1px solid;
+    border: color(var(--nudjwgrey) l(-1%) s(-5%)) 1px solid;
 }
 
 
@@ -982,16 +983,16 @@ Usage (In Ghost editor):
 .subscribe-form {
     margin: 1.5em 0;
     padding: 6.5vw 7vw 7vw;
-    border: color(var(--whitegrey) l(+2%)) 1px solid;
+    border: color(var(--nudjwgrey) l(+2%)) 1px solid;
     text-align: center;
-    background: color(var(--whitegrey) l(+4%));
+    background: var(--nudjwgrey);
     border-radius: 7px;
 }
 
 .subscribe-form-title {
     margin: 0 0 3px 0;
     padding: 0;
-    color: var(--darkgrey);
+    color: var(--charcoal);
     font-size: 3.5rem;
     line-height: 1;
     font-weight: 700;
@@ -999,7 +1000,7 @@ Usage (In Ghost editor):
 
 .subscribe-form p {
     margin-bottom: 1em;
-    color: var(--midgrey);
+    color: var(--charcoal);
     font-size: 2.2rem;
     line-height: 1.55em;
     letter-spacing: 0.2px;
@@ -1021,8 +1022,8 @@ Usage (In Ghost editor):
     display: block;
     width: 100%;
     padding: 10px;
-    border: color(var(--lightgrey) l(+7%)) 1px solid;
-    color: var(--midgrey);
+    border: color(var(--nudjlgrey) l(-2%)) 1px solid;
+    color: color(var(--nudjlgrey) l(-30%));
     font-size: 1.8rem;
     line-height: 1em;
     font-weight: normal;
@@ -1035,7 +1036,7 @@ Usage (In Ghost editor):
 
 .subscribe-email:focus {
     outline: 0;
-    border-color: color(var(--lightgrey) l(-2%));
+    border-color: color(var(--nudjlgrey) l(-2%));
 }
 
 .subscribe-form button {
@@ -1049,22 +1050,15 @@ Usage (In Ghost editor):
     line-height: 37px;
     font-weight: 400;
     text-align: center;
-    text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
-    background: linear-gradient(
-    color(var(--blue) whiteness(+7%)),
-    color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-    color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-    color(var(--blue) lightness(-4%) saturation(-10%))
-    );
-    border-radius: 5px;
-    box-shadow: 0 0 0 1px inset rgba(0,0,0,0.14);
+    background: var(--royalblue);
+    border-radius: 100px;
 
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .subscribe-form button:active,
 .subscribe-form button:focus {
-    background: color(var(--blue) lightness(-9%) saturation(-10%));
+    background: color(var(--royalblue) lightness(-9%) saturation(-10%));
 }
 
 @media (max-width: 650px) {
@@ -1120,7 +1114,7 @@ Usage (In Ghost editor):
 }
 
 .author-card-name a {
-    color: var(--darkgrey);
+    color: var(--charcoal);
     font-weight: 700;
 }
 
@@ -1152,8 +1146,8 @@ Usage (In Ghost editor):
 }
 
 .author-card-button:hover {
-    border-color: var(--blue);
-    color: var(--blue);
+    border-color: var(--royalblue);
+    color: var(--royalblue);
     text-decoration: none;
 }
 
@@ -1186,7 +1180,7 @@ Usage (In Ghost editor):
     margin: 0 20px 40px;
     padding: 25px;
     color: #fff;
-    background: var(--darkgrey) center center;
+    background: var(--charcoal) center center;
     background-size: cover;
     border-radius: 5px;
     box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
@@ -1347,7 +1341,7 @@ Usage (In Ghost editor):
 .floating-header-logo a {
     display: flex;
     align-items: center;
-    color: var(--darkgrey);
+    color: var(--charcoal);
     line-height: 1.1em;
     font-weight: 700;
 }
@@ -1444,7 +1438,7 @@ Usage (In Ghost editor):
     width: 100%;
     height: 2px;
     border: none;
-    color: var(--blue);
+    color: var(--charcoal);
     background: transparent;
 
     appearance: none;
@@ -1455,11 +1449,11 @@ Usage (In Ghost editor):
 }
 
 .progress::-webkit-progress-value {
-    background-color: var(--blue);
+    background-color: var(--charcoal);
 }
 
 .progress::-moz-progress-bar {
-    background-color: var(--blue);
+    background-color: var(--charcoal);
 }
 
 .progress-container {
@@ -1476,7 +1470,7 @@ Usage (In Ghost editor):
     display: block;
     width: 50%;
     height: inherit;
-    background-color: var(--blue);
+    background-color: var(--charcoal);
 }
 
 @media (max-width: 900px) {
@@ -1524,6 +1518,7 @@ Usage (In Ghost editor):
     height: 100px;
     margin: 0 0 20px 0;
     box-shadow: rgba(255,255,255,0.1) 0 0 0 6px;
+    z-index: 10;
 }
 
 .site-header-content .author-bio {
@@ -1545,7 +1540,7 @@ Usage (In Ghost editor):
     justify-content: center;
     align-items: center;
     margin: 0 0 10px 0;
-    font-family: Georgia, serif;
+    font-family: "F37 Jan", serif;
     font-style: italic;
 }
 
@@ -1684,7 +1679,7 @@ Usage (In Ghost editor):
 .subscribe-overlay-description {
     max-width: 650px;
     margin: 0 auto 50px;
-    font-family: Georgia, serif;
+    font-family: "F37 Jan", serif;
     font-size: 3rem;
     line-height: 1.3em;
     font-weight: 300;
@@ -1722,7 +1717,7 @@ Usage (In Ghost editor):
 
 .subscribe-email:focus {
     outline: 0;
-    border-color: color(var(--lightgrey) l(-2%));
+    border-color: color(var(--nudjlgrey) l(-2%));
 }
 
 .subscribe-overlay button {
@@ -1736,22 +1731,14 @@ Usage (In Ghost editor):
     line-height: 37px;
     font-weight: 400;
     text-align: center;
-    text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
-    background: linear-gradient(
-    color(var(--blue) whiteness(+7%)),
-    color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-    color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-    color(var(--blue) lightness(-4%) saturation(-10%))
-    );
-    border-radius: 8px;
-    box-shadow: 0 0 0 1px inset rgba(0,0,0,0.14);
-
+    background: var(--orange);
+    border-radius: 100px;
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .subscribe-overlay button:active,
 .subscribe-overlay button:focus {
-    background: color(var(--blue) lightness(-9%) saturation(-10%));
+    background: color(var(--orange) lightness(-9%) saturation(-10%));
 }
 
 .subscribe-overlay-close {
@@ -1802,7 +1789,7 @@ Usage (In Ghost editor):
     padding-top: 20px;
     padding-bottom: 60px;
     color: #fff;
-    background: color(var(--darkgrey) l(-15%));
+    background: var(--charcoal);
 }
 
 .site-footer-content {
